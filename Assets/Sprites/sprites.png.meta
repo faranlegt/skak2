@@ -1,0 +1,569 @@
+fileFormatVersion: 2
+guid: 126ea68fe20cd451dab5c13383c707c6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 166331865190696922
+    second: pawn
+  - first:
+      213: -4324198401770890622
+    second: bishop
+  - first:
+      213: -8505501765686269821
+    second: knight
+  - first:
+      213: 5955899907613107950
+    second: rook
+  - first:
+      213: -3983698914720293558
+    second: king
+  - first:
+      213: -5622373202330137473
+    second: queen
+  - first:
+      213: 117370066127942893
+    second: knight_awake
+  - first:
+      213: 7516263370970752129
+    second: cell_black
+  - first:
+      213: -906523704643554929
+    second: cell_white
+  - first:
+      213: 1046659206831462976
+    second: bubble
+  - first:
+      213: 5581593805523308816
+    second: skak_sprites_10
+  - first:
+      213: -31251736414013347
+    second: skak_sprites_11
+  - first:
+      213: -928628194442367306
+    second: skak_sprites_12
+  - first:
+      213: 6126101848035285059
+    second: skak_sprites_13
+  - first:
+      213: 952177325225840505
+    second: skak_sprites_14
+  - first:
+      213: -2331309506314187395
+    second: skak_sprites_15
+  - first:
+      213: 4391480567670943877
+    second: pawn
+  - first:
+      213: 8807103940164155889
+    second: bishop
+  - first:
+      213: 9200795565918013612
+    second: knight
+  - first:
+      213: 6477169165377794965
+    second: rook
+  - first:
+      213: 576194818954505127
+    second: king
+  - first:
+      213: -4645674151523600318
+    second: queen
+  - first:
+      213: -5477126338588299938
+    second: knight_awake
+  - first:
+      213: -3227859997665066272
+    second: cell_black
+  - first:
+      213: 5455493825550083250
+    second: cell_white
+  - first:
+      213: -2950552746217655245
+    second: bubble
+  - first:
+      213: 6128299156075563123
+    second: pawn
+  - first:
+      213: 3386662938922423588
+    second: bishop
+  - first:
+      213: -6110656803992641779
+    second: knight
+  - first:
+      213: 8553092956536608252
+    second: rook
+  - first:
+      213: 6708733205153277002
+    second: king
+  - first:
+      213: 6813553822765877458
+    second: queen
+  - first:
+      213: -5082647686934749709
+    second: knight_awake
+  - first:
+      213: -2423230811885516303
+    second: cursor
+  - first:
+      213: 1211998406744890917
+    second: cell_black
+  - first:
+      213: 6155212226941906339
+    second: cell_white
+  - first:
+      213: -2950032572879587788
+    second: bubble
+  - first:
+      213: -7263262467203474343
+    second: arrow
+  - first:
+      213: 6128299156075563123
+    second: base_0
+  - first:
+      213: 3386662938922423588
+    second: base_knight_0
+  - first:
+      213: -6110656803992641779
+    second: top_king
+  - first:
+      213: 8553092956536608252
+    second: top_knight_0
+  - first:
+      213: 6708733205153277002
+    second: top_rook
+  - first:
+      213: 6813553822765877458
+    second: top_queen
+  - first:
+      213: -5082647686934749709
+    second: base_1
+  - first:
+      213: 8607615323150697683
+    second: base_knight_1
+  - first:
+      213: 1211998406744890917
+    second: top_bishop
+  - first:
+      213: 6155212226941906339
+    second: top_knight_1
+  - first:
+      213: -2950032572879587788
+    second: cursor
+  - first:
+      213: 6683767447258443926
+    second: arrow
+  - first:
+      213: 7010617245534139418
+    second: cell_black
+  - first:
+      213: -7039003182478323700
+    second: cell_white
+  - first:
+      213: -5559150632450785296
+    second: sprites_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: base_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378c5330d971c0550800000000000000
+      internalID: 6128299156075563123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base_knight_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 140
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4259378eff7dffe20800000000000000
+      internalID: 3386662938922423588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top_king
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 140
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0fd1bd2306923ba0800000000000000
+      internalID: -6110656803992641779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top_knight_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 140
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5924d4ab0b2b670800000000000000
+      internalID: 8553092956536608252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top_rook
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 140
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4467024e453a1d50800000000000000
+      internalID: 6708733205153277002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top_queen
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 140
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d807ff1a1b9e8e50800000000000000
+      internalID: 6813553822765877458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd1bc59bdec679b0800000000000000
+      internalID: -5082647686934749709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top_bishop
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 105
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e5e562122e1d010800000000000000
+      internalID: 1211998406744890917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top_knight_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 105
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad6300a8e4bb6550800000000000000
+      internalID: 6155212226941906339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cursor
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4363ea141016f07d0800000000000000
+      internalID: -2950032572879587788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base_knight_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 105
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d44b930884647770800000000000000
+      internalID: 8607615323150697683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arrow
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 35
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690b827c41381cc50800000000000000
+      internalID: 6683767447258443926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cell_black
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3428572}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a143a40bd37ba4160800000000000000
+      internalID: 7010617245534139418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cell_white
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3428572}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00198756ef605e90800000000000000
+      internalID: -7039003182478323700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
