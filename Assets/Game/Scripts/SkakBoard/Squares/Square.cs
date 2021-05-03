@@ -1,4 +1,4 @@
-using System;
+using Game.Scripts.SpriteLines;
 using UnityEngine;
 
 namespace Game.Scripts.SkakBoard.Squares

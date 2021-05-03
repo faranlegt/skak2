@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace Game.Scripts
+namespace Game.Scripts.SpriteLines
 {
     public class SpritesLine : ScriptableObject
     {
