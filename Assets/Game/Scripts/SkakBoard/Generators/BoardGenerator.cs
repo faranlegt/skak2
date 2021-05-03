@@ -1,3 +1,4 @@
+using Game.Scripts.SkakBoard.Management;
 using Game.Scripts.SkakBoard.Squares;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace Game.Scripts.SkakBoard.Generators
     {
         public int size;
         
-        public EntitySpawner EntitySpawner => EntitySpawner.Instance;
+        public SkakSpawner SkakSpawner => SkakSpawner.Instance;
         
         public abstract Square[,] Generate(Board board);
     }

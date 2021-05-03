@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Game.Scripts.SpriteLines
+namespace Game.Scripts.Renderer
 {
     public class SpritesLine : ScriptableObject
     {

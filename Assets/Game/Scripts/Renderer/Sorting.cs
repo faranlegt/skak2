@@ -1,4 +1,4 @@
-namespace Game.Scripts.SkakBoard
+namespace Game.Scripts.Renderer
 {
     /// <summary>
     /// Sorting in skak is based on board lines (y coord)

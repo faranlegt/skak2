@@ -12,5 +12,7 @@ namespace Game.Scripts.SkakBoard.Squares
         
         [Range(0, 7)]
         public int animationFrame = 0;
+
+        public bool isWalkable = true;
     }
 }

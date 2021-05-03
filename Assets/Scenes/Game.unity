@@ -176,6 +176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 492120967}
   - component: {fileID: 492120966}
+  - component: {fileID: 492120968}
+  - component: {fileID: 492120969}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -211,7 +213,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &701111305
+--- !u!114 &492120968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492120965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99988b1e72fb4447a5786ac352a39892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &492120969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492120965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bdf00c1adb14055a57f454b4e4a0811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!84 &913091239
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,7 +252,7 @@ RenderTexture:
   m_IsAlphaChannelOptional: 0
   serializedVersion: 3
   m_Width: 1088
-  m_Height: 522
+  m_Height: 535
   m_AntiAliasing: 1
   m_MipCount: -1
   m_DepthFormat: 2
@@ -339,13 +365,13 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 256
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 701111305}
+  m_TargetTexture: {fileID: 913091239}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -421,6 +447,7 @@ MonoBehaviour:
   shadowHeightCoefficient: 0.2
   heightCoefficient: -1
   shadowColor: {r: 0.49019608, g: 0.34901962, b: 0.3254902, a: 1}
+  up: {x: 0, y: 0, z: -1}
 --- !u!4 &1423072338
 Transform:
   m_ObjectHideFlags: 0
@@ -531,7 +558,7 @@ MonoBehaviour:
     00000000:
       type: {class: NullableBoolSerializable, ns: MLAPI.Configuration, asm: Unity.Multiplayer.MLAPI.Runtime}
       data:
-        Value: 1897319656204293034
+        Value: 0
 --- !u!4 &1648070970
 Transform:
   m_ObjectHideFlags: 0
@@ -645,7 +672,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -724,7 +751,7 @@ MonoBehaviour:
   m_RefResolutionX: 320
   m_RefResolutionY: 180
   m_UpscaleRT: 0
-  m_PixelSnapping: 1
+  m_PixelSnapping: 0
   m_CropFrameX: 0
   m_CropFrameY: 0
-  m_StretchFill: 0
+  m_StretchFill: 1

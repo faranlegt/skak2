@@ -1,14 +1,15 @@
 using System;
 using Game.Scripts.SkakBoard;
+using Game.Scripts.SkakBoard.Management;
 using Game.Scripts.SkakBoard.Squares;
 using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace Game.Scripts
 {
-    public class EntitySpawner : MonoBehaviour
+    public class SkakSpawner : MonoBehaviour
     {
-        public static EntitySpawner Instance { get; private set; }
+        public static SkakSpawner Instance { get; private set; }
 
         public Square squarePrefab;
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.Scripts.SpriteLines
+namespace Game.Scripts.Renderer
 {
     public class LineAnimator : MonoBehaviour
     {
