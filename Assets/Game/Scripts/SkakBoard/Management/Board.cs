@@ -1,3 +1,4 @@
+using Game.Scripts.Renderer;
 using Game.Scripts.SkakBoard.Generators;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -12,12 +13,14 @@ namespace Game.Scripts.SkakBoard.Management
         private Squares _squares;
 
         public int Size { get; private set; }
+        public Sorting Sorting { get; private set; }
 
         public BoardGenerator boardGenerator;
         public float squareSize = 1;
 
         private void Awake()
         {
+            Sorting = new Sorting(this);
             _entityManager = GetComponent<EntityManager>();
             _squares = GetComponent<Squares>();
         }
@@ -38,16 +41,25 @@ namespace Game.Scripts.SkakBoard.Management
         }
 
         public Vector3 GetPositionFor(Vector2Int p) => GetPositionFor(p.x, p.y);
-        
-        public Vector3 GetPositionFor(int x, int y) => 
-            transform.position + new Vector3((x - Size / 2f + 0.5f) * squareSize, (y - Size / 2f + 0.5f) * squareSize, 0);
+
+        public Vector3 GetPositionFor(int x, int y) =>
+            transform.position +
+            new Vector3((x - Size / 2f + 0.5f) * squareSize, (y - Size / 2f + 0.5f) * squareSize, 0);
 
         private void BuildBoard()
         {
             Size = boardGenerator.size;
-            
+
             _squares.Generate(boardGenerator);
             _squares.SyncSquaresPositions();
+        }
+
+        public Vector3 ToBoard(Vector3 world)
+        {
+            float centerOffset = Size / 2f;
+            Vector3 board = new Vector3(centerOffset, centerOffset) + (world - transform.position) / squareSize;
+            board.z = 0;
+            return board;
         }
     }
 }

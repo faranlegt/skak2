@@ -1,3 +1,4 @@
+using Game.Scripts.Models;
 using Game.Scripts.SkakBoard.Entities;
 using Game.Scripts.SkakBoard.Management;
 using UnityEditor;
@@ -44,9 +45,9 @@ namespace Editor
         {
             entityMovement.Move(new Movement()
             {
-                destination = destination,
-                source = entityMovement.transform.position,
-                movementTime = timeToMove
+                Destination = destination,
+                Source = entityMovement.transform.position,
+                MovementTime = timeToMove
             });
         }
     }

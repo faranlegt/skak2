@@ -1,4 +1,6 @@
+using Game.Scripts.Models;
 using Game.Scripts.Renderer;
+using Game.Scripts.SkakBoard.Management;
 using UnityEngine;
 
 namespace Game.Scripts.SkakBoard.Squares
@@ -60,7 +62,7 @@ namespace Game.Scripts.SkakBoard.Squares
         }
 
         public void SetSorting(int line) =>
-            _spriteRenderer.sortingOrder = Sorting.Square(line);
+            _spriteRenderer.sortingOrder = GetComponentInParent<Board>().Sorting.Square(line);
 
         private void OnValidate()
         {

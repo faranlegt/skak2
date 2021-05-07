@@ -1,4 +1,4 @@
-Shader "Custom/Piece Shader"
+Shader "Custom/Piece Shadow"
 {
     Properties
     {
@@ -27,7 +27,6 @@ Shader "Custom/Piece Shader"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile _ PIXELSNAP_ON
             #include "UnityCG.cginc"
 
             struct appdata_t

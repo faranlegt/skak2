@@ -13,8 +13,11 @@ namespace Game.Scripts
         public float shadowHeightCoefficient = 0;
         public float heightCoefficient = 1f;
         public Color shadowColor = Color.black;
+        public int pixelPerUnit = 16;
         
         public Vector3 up = Vector3.back;
+
+        public Vector3 SnapGrid => new Vector2(1f / pixelPerUnit, 1f / pixelPerUnit); 
 
         private void Awake()
         {

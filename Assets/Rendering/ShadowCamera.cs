@@ -28,6 +28,8 @@ namespace Rendering
             }
             
             _camera = GetComponent<Camera>();
+            _camera.orthographicSize = mainCamera.orthographicSize;
+            
             if (_shadowMap)
             {
                 _shadowMap.Release();

@@ -1,3 +1,4 @@
+using Game.Scripts.Models;
 using UnityEngine;
 
 namespace Game.Scripts.Renderer

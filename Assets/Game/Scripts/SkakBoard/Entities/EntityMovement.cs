@@ -1,10 +1,12 @@
 using System;
+using Game.Scripts.Models;
 using UnityEngine;
 
 namespace Game.Scripts.SkakBoard.Entities
 {
     public delegate void MovementCallback(Movement m);
     
+    [RequireComponent(typeof(BoardEntity))]
     public class EntityMovement : MonoBehaviour
     {
         private BoardEntity _entity;
@@ -21,15 +23,15 @@ namespace Game.Scripts.SkakBoard.Entities
         {
             if (!(movement is { } m)) return;
 
-            m.progress += Time.deltaTime / m.movementTime;
+            m.Progress += Time.deltaTime / m.MovementTime;
 
-            Vector3 source = m.source;
-            Vector3 dest = _entity.Board.GetPositionFor(m.destination);
-            Vector3 up = SkakGlobals.Instance.up * jumpCurve.Evaluate(m.progress); 
+            Vector3 source = m.Source;
+            Vector3 dest = _entity.Board.GetPositionFor(m.Destination);
+            Vector3 up = SkakGlobals.Instance.up * jumpCurve.Evaluate(m.Progress); 
             
-            transform.position = Vector3.Lerp(source, dest, m.progress) + up;
+            transform.position = Vector3.Lerp(source, dest, m.Progress) + up;
 
-            if (m.progress >= 1)
+            if (m.Progress >= 1)
             {
                 OnMovementFinished?.Invoke(m);
                 movement = null;
