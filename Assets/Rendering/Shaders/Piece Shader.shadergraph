@@ -352,7 +352,7 @@
             "m_Id": "83791bb2270544b9a9a51350a08a81f5"
         },
         {
-            "m_Id": "b0ae966d80d94eb2a9794213b0782fa1"
+            "m_Id": "b1f8f2824f1f4d30b40d3992b5e9d6de"
         }
     ],
     "synonyms": [],
@@ -1465,7 +1465,7 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
-    "m_ObjectId": "b0ae966d80d94eb2a9794213b0782fa1",
+    "m_ObjectId": "b1f8f2824f1f4d30b40d3992b5e9d6de",
     "m_Id": 1,
     "m_DisplayName": "Picked_color",
     "m_SlotType": 1,
