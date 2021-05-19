@@ -1,7 +1,9 @@
+using System;
 using Game.Scripts.Renderer;
 using Game.Scripts.SkakBoard.Generators;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.InputSystem;
 
 namespace Game.Scripts.SkakBoard.Management
 {
@@ -57,9 +59,20 @@ namespace Game.Scripts.SkakBoard.Management
         public Vector3 ToBoard(Vector3 world)
         {
             float centerOffset = Size / 2f;
-            Vector3 board = new Vector3(centerOffset, centerOffset) + (world - transform.position) / squareSize;
+            Vector3 board = new Vector3(centerOffset - 0.5f, centerOffset - 0.5f) + (world - transform.position) / squareSize;
             board.z = 0;
             return board;
+        }
+
+        private void Update()
+        {
+            if (Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                var mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+                var cell = ToBoard(mousePos);
+
+                Debug.Log(cell);
+            }
         }
     }
 }

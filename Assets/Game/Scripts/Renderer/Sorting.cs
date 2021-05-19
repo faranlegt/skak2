@@ -22,11 +22,6 @@ namespace Game.Scripts.Renderer
 
         public int Square(int line) => (int)BaseLine(line);
 
-        public int Entity(Vector3 position) => (int)(BaseLine(_board.ToBoard(position).x) + _entityStep);
-
-        public int Eye(Vector3 piecePosition, bool isBehind, bool isFrontEye) => 
-            Entity(piecePosition) + (isBehind ? 2 : -2) + (isFrontEye ? -1 : 0);
-
-        public int Pupil(Vector3 piecePosition, bool isBehind, bool isFrontEye) => Eye(piecePosition, isBehind, isFrontEye) + 1;
+        public int Entity(Vector3 position) => (int)(BaseLine(_board.ToBoard(position).y) + _entityStep);
     }
 }

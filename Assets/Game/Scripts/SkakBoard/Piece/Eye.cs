@@ -1,21 +1,18 @@
 using System;
 using Game.Scripts.SkakBoard.Management;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Game.Scripts.SkakBoard.Piece
 {
     public class Eye : MonoBehaviour
     {
-        private Piece _piece;
-        private SpriteRenderer _spriteRenderer;
-        private SpriteRenderer _pupilSpriteRenderer;
-        private Board _board;
+        private SortingGroup _sortingGroup;
 
         public Transform pupil;
         
         public float eyeballRadius = 2.5f / 16;
         public bool snapping = true;
-        public Vector3 snapOffset = Vector3.zero;
 
         public Vector3 watchingPoint;
         public bool eyeFixed = false;
@@ -26,12 +23,10 @@ namespace Game.Scripts.SkakBoard.Piece
         /// </summary>
         public bool isFrontEye = false;
 
+
         private void Awake()
         {
-            _piece = GetComponentInParent<Piece>();
-            _board = GetComponentInParent<Board>();
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-            _pupilSpriteRenderer = pupil.GetComponent<SpriteRenderer>();
+            _sortingGroup = GetComponent<SortingGroup>();
         }
 
         /// <summary>
@@ -39,17 +34,16 @@ namespace Game.Scripts.SkakBoard.Piece
         /// </summary>
         private void LateUpdate()
         {
-            Vector3 piecePosition = _piece.transform.position;
-            Vector3 localPosition = transform.localPosition;
+            var transform1 = transform;
+            var localPosition = transform1.localPosition;
             
-            _spriteRenderer.sortingOrder = _board.Sorting.Eye(piecePosition, localPosition.y < 0, isFrontEye);
-            _pupilSpriteRenderer.sortingOrder = _board.Sorting.Pupil(piecePosition, localPosition.y < 0, isFrontEye);
+            _sortingGroup.sortingOrder = (localPosition.y < 0 ? 2 : -2) + (isFrontEye ? -1 : 0);
 
-            Vector3 position = transform.position;
-            Vector3 watchingDirection = watchingPoint - position;
+            var position = transform1.position;
+            var watchingDirection = watchingPoint - position;
             watchingDirection.z = 0;
             
-            Vector3 pupilPos = watchingDirection * (eyeballRadius / watchingDirection.magnitude);
+            var pupilPos = watchingDirection * (eyeballRadius / watchingDirection.magnitude);
             if (snapping)
             {
                 pupilPos = pupilPos.PixelSnap(Vector3.zero, pupilPixelOffset);

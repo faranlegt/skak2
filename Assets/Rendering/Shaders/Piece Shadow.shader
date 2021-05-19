@@ -50,7 +50,7 @@ Shader "Custom/Piece Shadow"
                 // actually do nothinh
                 // // matrix translates sprite on 1 unit down, bcs sprite will be rotated around origin which is (0.5, 0.5)
                 const float4x4 translateMatrix = float4x4(1, 0, 0, 0,
-                                                          0, 1, 0, 0,
+                                                          0, 1, 0, 0.5,
                                                           0, 0, 1, 0,
                                                           0, 0, 0, 1);
                 // rotates sprite on Pi around Z
