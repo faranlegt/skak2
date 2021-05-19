@@ -1,4 +1,4 @@
-Shader "Custom/Piece Shader"
+Shader "Custom/Piece Shadow"
 {
     Properties
     {
@@ -27,7 +27,6 @@ Shader "Custom/Piece Shader"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile _ PIXELSNAP_ON
             #include "UnityCG.cginc"
 
             struct appdata_t
@@ -51,7 +50,7 @@ Shader "Custom/Piece Shader"
                 // actually do nothinh
                 // // matrix translates sprite on 1 unit down, bcs sprite will be rotated around origin which is (0.5, 0.5)
                 const float4x4 translateMatrix = float4x4(1, 0, 0, 0,
-                                                          0, 1, 0, 0,
+                                                          0, 1, 0, 0.5,
                                                           0, 0, 1, 0,
                                                           0, 0, 0, 1);
                 // rotates sprite on Pi around Z

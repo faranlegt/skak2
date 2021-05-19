@@ -1,3 +1,4 @@
+using Game.Scripts.SkakBoard.Management;
 using Game.Scripts.SkakBoard.Squares;
 using UnityEngine;
 
@@ -24,7 +25,7 @@ namespace Game.Scripts.SkakBoard.Generators
                     squareType = squareType
                 };
 
-                cells[i, j] = EntitySpawner.SpawnCell(board, i, j, cellState);
+                cells[i, j] = SkakSpawner.SpawnCell(board, i, j, cellState);
             }
 
             return cells;
