@@ -214,7 +214,7 @@ MonoBehaviour:
   left: {fileID: 1069066281775219760}
   right: {fileID: 2849730710150759628}
   watchMouse: 0
-  pixelSnapping: 0
+  pixelSnapping: 1
   pixelSnapOffset: {x: 0.5, y: 0}
   yCoefficient: -0.5
 --- !u!1 &4190220528987314081
