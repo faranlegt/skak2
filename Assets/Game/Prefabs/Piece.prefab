@@ -316,13 +316,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pupil: {fileID: 4279689679870596463}
-  eyeballRadius: 0.15625
-  snapping: 1
+  eyeballRadius: 0.1
+  snapping: 0
   watchingPoint: {x: 0, y: 0, z: 0}
   eyeFixed: 0
-  pupilPixelOffset: {x: 0, y: 0}
+  pupilPixelOffset: {x: 0.5, y: 0.5}
   skinRenderer: {fileID: 316724615892018862}
   angle: 0
+  angleForSkin: 0
   isFrontEye: 0
 --- !u!210 &1508463949650902701
 SortingGroup:
@@ -757,13 +758,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pupil: {fileID: 1149508890809640877}
-  eyeballRadius: 0.08
-  snapping: 1
+  eyeballRadius: 0.1
+  snapping: 0
   watchingPoint: {x: 0, y: 0, z: 0}
   eyeFixed: 0
   pupilPixelOffset: {x: 0.5, y: 0.5}
   skinRenderer: {fileID: 8227147832216986179}
   angle: 0
+  angleForSkin: 0
   isFrontEye: 0
 --- !u!210 &8710113239219765988
 SortingGroup:
