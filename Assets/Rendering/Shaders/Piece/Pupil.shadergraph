@@ -495,6 +495,9 @@
             "m_Id": "481b6904fe5e4b008649c1119a41fd5d"
         },
         {
+            "m_Id": "6e8f50cae75e4323b5d8c6c82e241790"
+        },
+        {
             "m_Id": "68d1cd4b75f144b39f0b41ad1c0357dd"
         }
     ],
@@ -508,11 +511,13 @@
     "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"4a86bd2a0f2f14ed9b51224399689229\",\n        \"type\": 3\n    }\n}",
     "m_PropertyGuids": [
         "eb5587fc-f51a-45f9-92bc-46fccc78b21c",
-        "de1222e3-90b7-4dc4-8076-7caf06f86ae6"
+        "de1222e3-90b7-4dc4-8076-7caf06f86ae6",
+        "bb86c489-56db-4ade-82de-d7e507bb6e83"
     ],
     "m_PropertyIds": [
         1481622041,
-        849702849
+        849702849,
+        979209940
     ]
 }
 
@@ -797,6 +802,21 @@
         "z": 0.0,
         "w": 0.0
     },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "6e8f50cae75e4323b5d8c6c82e241790",
+    "m_Id": 979209940,
+    "m_DisplayName": "Snap Size",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Vector1_a9c38ae797b34c399eacc57c8af48bb1",
+    "m_StageCapability": 3,
+    "m_Value": 1.0,
+    "m_DefaultValue": 0.0,
     "m_Labels": []
 }
 
