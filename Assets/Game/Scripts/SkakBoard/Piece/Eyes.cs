@@ -47,11 +47,14 @@ namespace Game.Scripts.SkakBoard.Piece
             
             
             Vector3 leftDirection = leftWatchingPoint - transform.position;
-            Vector3 rightDirection = leftWatchingPoint - transform.position;
+            Vector3 rightDirection = rightWatchingPoint - transform.position;
 
             float leftAngle = Vector3.SignedAngle(Vector3.down, leftDirection, Vector3.forward);
             float rightAngle = Vector3.SignedAngle(Vector3.down, rightDirection, Vector3.forward);
             float missingAnglesDiff = _piece.piece.angleBetweenEyes - Mathf.Abs(leftAngle - rightAngle);
+            
+            left.angleForSkin = leftAngle;
+            right.angleForSkin = rightAngle;
 
             if (missingAnglesDiff > 0)
             {
@@ -61,12 +64,12 @@ namespace Game.Scripts.SkakBoard.Piece
 
             if (!left.eyeFixed)
             {
-                left.transform.localPosition = GetEyePosition(leftAngle);
+                left.angle = leftAngle;
             }
             
             if (!right.eyeFixed)
             {
-                right.transform.localPosition = GetEyePosition(rightAngle);
+                right.angle = rightAngle;
             }
 
             left.watchingPoint = leftWatchingPoint;
@@ -74,21 +77,6 @@ namespace Game.Scripts.SkakBoard.Piece
 
             left.isFrontEye = left.transform.localPosition.y > right.transform.localPosition.y;
             right.isFrontEye = !left.isFrontEye;
-        }
-
-        private Vector3 GetEyePosition(float a)
-        {
-            float rad = a * Mathf.Deg2Rad;
-            float x = Mathf.Sin(rad);
-            float y = Mathf.Cos(rad) * yCoefficient;
-
-            var freePos = new Vector3(x, y, 0) * _piece.piece.eyesRadius;
-            if (pixelSnapping)
-            {
-                freePos = freePos.PixelSnap(transform.localPosition, pixelSnapOffset);
-            }
-
-            return freePos;
         }
     }
 }

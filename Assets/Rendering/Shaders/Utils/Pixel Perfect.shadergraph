@@ -91,6 +91,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "bb8ae9cc326143b1882254f0fcf66853"
+                },
+                "m_SlotId": 1
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ffaf22d79a9c44969b7266854ef43c53"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "cb5cedafd51a4498b7b89576511c8873"
                 },
                 "m_SlotId": 0
@@ -207,8 +221,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -899.0001831054688,
-            "y": 27.499988555908204,
+            "x": -1017.5000610351563,
+            "y": 27.499996185302736,
             "width": 211.5,
             "height": 340.0
         }
@@ -453,6 +467,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "4e8b2854ff754632ad587bc783928bc4",
+    "m_Id": 2,
+    "m_DisplayName": "Offset",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Offset",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "552b7905eb634dffa7ff1b7b182c34e9",
     "m_Group": {
@@ -496,8 +525,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -645.000244140625,
-            "y": 27.499988555908204,
+            "x": -660.0000610351563,
+            "y": 27.499996185302736,
             "width": 208.0,
             "height": 278.0
         }
@@ -505,6 +534,9 @@
     "m_Slots": [
         {
             "m_Id": "ba49ee11fd59471a8b69ada8d160df65"
+        },
+        {
+            "m_Id": "4e8b2854ff754632ad587bc783928bc4"
         },
         {
             "m_Id": "a75b52b3798f4336b850382365e58362"
@@ -894,8 +926,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1190.5,
-            "y": 27.50000762939453,
+            "x": -1266.5,
+            "y": 27.499996185302736,
             "width": 206.0,
             "height": 130.5
         }

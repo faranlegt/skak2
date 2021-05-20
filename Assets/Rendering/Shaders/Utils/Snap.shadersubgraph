@@ -8,6 +8,9 @@
         },
         {
             "m_Id": "4a5917a25f6a40a28d82c219b11aade9"
+        },
+        {
+            "m_Id": "a9c38ae797b34c399eacc57c8af48bb1"
         }
     ],
     "m_Keywords": [],
@@ -23,6 +26,9 @@
         },
         {
             "m_Id": "e1f982ce529d4fb0b78291bbac10356e"
+        },
+        {
+            "m_Id": "fd0a9146f6694c2eba73c7a98171cb1c"
         }
     ],
     "m_GroupDatas": [],
@@ -69,6 +75,20 @@
                 },
                 "m_SlotId": 0
             }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "fd0a9146f6694c2eba73c7a98171cb1c"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "30d5fbe3772f4694bb11e552eda01efb"
+                },
+                "m_SlotId": 3
+            }
         }
     ],
     "m_VertexContext": {
@@ -93,7 +113,7 @@
     },
     "m_Path": "Sub Graphs",
     "m_ConcretePrecision": 0,
-    "m_PreviewMode": 2,
+    "m_PreviewMode": 1,
     "m_OutputNode": {
         "m_Id": "51d81749195147018dec507017201686"
     },
@@ -115,7 +135,7 @@
             "x": -104.0,
             "y": -139.0,
             "width": 208.0,
-            "height": 302.0
+            "height": 326.0
         }
     },
     "m_Slots": [
@@ -124,6 +144,9 @@
         },
         {
             "m_Id": "852d045a94fc44a180201d804a99afab"
+        },
+        {
+            "m_Id": "3de4cde46fea4d1a9e32eda83509543c"
         },
         {
             "m_Id": "c18e73e8e59c43118bbad378feb4720a"
@@ -140,6 +163,21 @@
     "m_FunctionName": "Snap",
     "m_FunctionSource": "143d9ac5792a1496795f1ad043b2c3cf",
     "m_FunctionBody": "#include \"UnityCG.cginc\"\nOut = UnityPixelSnap(A)"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "3de4cde46fea4d1a9e32eda83509543c",
+    "m_Id": 3,
+    "m_DisplayName": "SnapSize",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "SnapSize",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
 }
 
 {
@@ -220,6 +258,21 @@
         "z": 0.0,
         "w": 0.0
     },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "80ad9eccee4247b9be37fdbfc5ed4ed4",
+    "m_Id": 0,
+    "m_DisplayName": "Snap Size",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
     "m_Labels": []
 }
 
@@ -312,6 +365,29 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "a9c38ae797b34c399eacc57c8af48bb1",
+    "m_Guid": {
+        "m_GuidSerialized": "bb86c489-56db-4ade-82de-d7e507bb6e83"
+    },
+    "m_Name": "Snap Size",
+    "m_DefaultReferenceName": "Vector1_a9c38ae797b34c399eacc57c8af48bb1",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 1.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "c18e73e8e59c43118bbad378feb4720a",
@@ -348,8 +424,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -242.0,
-            "y": -44.0,
+            "x": -251.0,
+            "y": -96.0,
             "width": 109.5,
             "height": 34.0
         }
@@ -429,5 +505,40 @@
         "w": 0.0
     },
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "fd0a9146f6694c2eba73c7a98171cb1c",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -251.0,
+            "y": -42.0,
+            "width": 126.5,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "80ad9eccee4247b9be37fdbfc5ed4ed4"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "a9c38ae797b34c399eacc57c8af48bb1"
+    }
 }
 
