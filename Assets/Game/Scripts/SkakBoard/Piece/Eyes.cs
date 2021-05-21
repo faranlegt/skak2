@@ -1,3 +1,4 @@
+using Game.Scripts.Models;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,6 +19,7 @@ namespace Game.Scripts.SkakBoard.Piece
         public Vector2 pixelSnapOffset;
 
         public float yCoefficient = 0.5f;
+        public Emotion emotion;
 
         private void Awake()
         {
@@ -27,11 +29,19 @@ namespace Game.Scripts.SkakBoard.Piece
         private void Start()
         {
             SetPositions();
+
+            if (!emotion)
+            {
+                emotion = ScriptableObject.CreateInstance<Emotion>();
+            }
         }
 
         private void Update()
         {
             SetPositions();
+
+            left.emotion = emotion.left;
+            right.emotion = emotion.right;
 
             if (watchMouse)
             {

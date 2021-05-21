@@ -1,4 +1,5 @@
 using System;
+using Game.Scripts.Models;
 using Game.Scripts.SkakBoard.Management;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -7,6 +8,10 @@ namespace Game.Scripts.SkakBoard.Piece
 {
     public class Eye : MonoBehaviour
     {
+        private static readonly int AngleProperty = Shader.PropertyToID("angle");
+        private static readonly int UpperEyelidLevelProperty = Shader.PropertyToID("closeLevelUp");
+        private static readonly int BottomEyelidLevelProperty = Shader.PropertyToID("closeLevelDown");
+        
         private SortingGroup _sortingGroup;
         private Eyes _eyes;
         private Piece _piece;
@@ -18,9 +23,9 @@ namespace Game.Scripts.SkakBoard.Piece
 
         public Vector3 watchingPoint;
         public bool eyeFixed = false;
-        public Vector2 pupilPixelOffset;
 
         public SpriteRenderer skinRenderer;
+        public Emotion.EyeEmotion emotion = new Emotion.EyeEmotion();
 
         public float angle;
         public float angleForSkin;
@@ -29,8 +34,6 @@ namespace Game.Scripts.SkakBoard.Piece
         /// True if eyes is upon second eye. Used for sorting, so the eye is behind won't get above.
         /// </summary>
         public bool isFrontEye = false;
-
-        private static readonly int Angle = Shader.PropertyToID("angle");
 
 
         private void Awake()
@@ -45,6 +48,14 @@ namespace Game.Scripts.SkakBoard.Piece
         /// </summary>
         private void LateUpdate()
         {
+            var eyelidsMaterial = skinRenderer.material;
+            eyelidsMaterial.SetFloat(AngleProperty, angleForSkin * Mathf.Deg2Rad);
+            eyelidsMaterial.SetFloat(UpperEyelidLevelProperty, emotion.upperEyelidLevel);
+            eyelidsMaterial.SetFloat(BottomEyelidLevelProperty, emotion.bottomEyelidLevel);
+
+            pupil.localScale = Vector3.one * emotion.pupilSize / 2f;
+            var pupilPixelOffset = Vector2.one / (2 - emotion.pupilSize % 2);
+
             var transform_ = this.transform;
             var localPosition = transform_.localPosition;
             
@@ -61,8 +72,6 @@ namespace Game.Scripts.SkakBoard.Piece
             }
 
             pupil.transform.localPosition = pupilPos;
-
-            skinRenderer.material.SetFloat(Angle, angleForSkin * Mathf.Deg2Rad);
         }
     }
 }
