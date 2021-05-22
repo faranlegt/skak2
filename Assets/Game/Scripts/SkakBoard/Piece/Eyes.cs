@@ -73,13 +73,11 @@ namespace Game.Scripts.SkakBoard.Piece
 
             if (!left.eyeFixed)
             {
-                left.angle = leftAngle;
                 left.transform.localPosition = GetEyePosition(leftAngle);
             }
             
             if (!right.eyeFixed)
             {
-                right.angle = rightAngle;
                 right.transform.localPosition = GetEyePosition(rightAngle);
             }
 

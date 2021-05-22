@@ -1,10 +1,18 @@
+using System;
+using Popcron.Console;
 using UnityEngine;
 
 namespace Game.Scripts
 {
     public class SkakGlobals : MonoBehaviour
     {
-        public static SkakGlobals Instance { get; private set; }
+        public static SkakGlobals Instance => _instance != null 
+                ? _instance 
+                : Application.isPlaying 
+                    ? _instance = FindObjectOfType<SkakGlobals>() 
+                    : null;
+        
+        private static SkakGlobals _instance;
     
         private static readonly int ShadowHeightCoefficient = Shader.PropertyToID("_ShadowHeightCoefficient");
         private static readonly int HeightCoefficient = Shader.PropertyToID("_HeightCoefficient");
@@ -21,15 +29,35 @@ namespace Game.Scripts
 
         private void Awake()
         {
-            if (Instance)
-            {
-                Debug.LogWarning("Skak globals instance is set already. Destroying duplicate");
-                Destroy(gameObject);
-                return;
-            }
-            Instance = this;
+            Debug.Assert( 
+                _instance == null || _instance == this,
+                "More than one singleton instance instantiated!", 
+                this
+            );
+            
+            _instance = this;
             
             SetShaderGlobals();
+        }
+
+        private void Start()
+        {
+            Console.IsOpen = false;
+        }
+
+        private void OnDestroy()
+        {
+            _instance = null;
+        }
+
+        private void OnEnable()
+        {
+            Parser.Register(this, "globals");
+        }
+
+        private void OnDisable()
+        {
+            Parser.Unregister(this);
         }
 
         private void OnValidate()

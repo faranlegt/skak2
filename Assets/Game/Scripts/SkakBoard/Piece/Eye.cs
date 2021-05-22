@@ -13,8 +13,6 @@ namespace Game.Scripts.SkakBoard.Piece
         private static readonly int BottomEyelidLevelProperty = Shader.PropertyToID("closeLevelDown");
         
         private SortingGroup _sortingGroup;
-        private Eyes _eyes;
-        private Piece _piece;
 
         public Transform pupil;
         
@@ -27,7 +25,6 @@ namespace Game.Scripts.SkakBoard.Piece
         public SpriteRenderer skinRenderer;
         public Emotion.EyeEmotion emotion = new Emotion.EyeEmotion();
 
-        public float angle;
         public float angleForSkin;
         
         /// <summary>
@@ -39,8 +36,8 @@ namespace Game.Scripts.SkakBoard.Piece
         private void Awake()
         {
             _sortingGroup = GetComponent<SortingGroup>();
-            _piece = GetComponentInParent<Piece>();
-            _eyes = GetComponentInParent<Eyes>();
+            GetComponentInParent<Piece>();
+            GetComponentInParent<Eyes>();
         }
 
         /// <summary>

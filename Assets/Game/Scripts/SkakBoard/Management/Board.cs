@@ -1,6 +1,7 @@
 using System;
 using Game.Scripts.Renderer;
 using Game.Scripts.SkakBoard.Generators;
+using Popcron.Console;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
@@ -18,7 +19,12 @@ namespace Game.Scripts.SkakBoard.Management
         public Sorting Sorting { get; private set; }
 
         public BoardGenerator boardGenerator;
+        
+        [Command("squareSize")]
         public float squareSize = 1;
+
+        [Command("test")]
+        public int Test(int a, int b) => a + b;
 
         private void Awake()
         {
@@ -32,6 +38,16 @@ namespace Game.Scripts.SkakBoard.Management
             Assert.IsNotNull(boardGenerator, "Board generator wasn't set. Board will not be generated.");
 
             BuildBoard();
+        }
+
+        private void OnEnable()
+        {
+            Parser.Register(this, "board");
+        }
+
+        private void OnDisable()
+        {
+            Parser.Unregister(this);
         }
 
         public void OnValidate()
