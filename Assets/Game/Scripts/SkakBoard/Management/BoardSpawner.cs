@@ -9,6 +9,9 @@ namespace Game.Scripts.SkakBoard.Management
     public class BoardSpawner : MonoBehaviour
     {
         private Board _board;
+
+        public Transform entitiesParent;
+        public Transform squaresParent;
         
         public Square squarePrefab;
         public Piece.Piece piecePrefab;
@@ -18,9 +21,9 @@ namespace Game.Scripts.SkakBoard.Management
             _board = GetComponent<Board>();
         }
 
-        public Square SpawnCell(int x, int y, SquareState squareState)
+        public Square SpawnSquare(int x, int y, SquareState squareState)
         {
-            var square = Instantiate(squarePrefab, _board.GetPositionFor(x, y), Quaternion.identity, _board.transform);
+            var square = Instantiate(squarePrefab, _board.GetPositionFor(x, y), Quaternion.identity, squaresParent);
             square.state = squareState;
             
             square.SyncSprite();
@@ -31,7 +34,7 @@ namespace Game.Scripts.SkakBoard.Management
 
         public Piece.Piece SpawnPiece(Vector2Int pos)
         {
-            var piece = Instantiate(piecePrefab, _board.GetPositionFor(pos), Quaternion.identity, _board.transform);
+            var piece = Instantiate(piecePrefab, _board.GetPositionFor(pos), Quaternion.identity, entitiesParent);
 
             if (_board.entityManager.Place(piece.GetComponent<BoardEntity>(), pos))
             {

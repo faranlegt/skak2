@@ -25,7 +25,7 @@ namespace Game.Scripts.SkakBoard.Generators
                     squareType = squareType
                 };
 
-                cells[i, j] = board.spawner.SpawnCell(i, j, cellState);
+                cells[i, j] = board.spawner.SpawnSquare(i, j, cellState);
             }
 
             return cells;
