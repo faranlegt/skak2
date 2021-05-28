@@ -20,6 +20,7 @@ namespace Game.Scripts.SkakBoard.Piece
 
         public float yCoefficient = 0.5f;
         public Emotion emotion;
+        public int color;
 
         private void Awake()
         {
@@ -42,6 +43,8 @@ namespace Game.Scripts.SkakBoard.Piece
 
             left.emotion = emotion.left;
             right.emotion = emotion.right;
+            left.color = color;
+            right.color = color;
 
             if (watchMouse)
             {

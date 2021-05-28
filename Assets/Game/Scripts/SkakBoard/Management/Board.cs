@@ -5,6 +5,7 @@ using Popcron.Console;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Game.Scripts.SkakBoard.Management
 {
@@ -12,25 +13,23 @@ namespace Game.Scripts.SkakBoard.Management
     [RequireComponent(typeof(Squares))]
     public class Board : MonoBehaviour
     {
-        private EntityManager _entityManager;
-        private Squares _squares;
+        [HideInInspector] public EntityManager entityManager;
+        [HideInInspector] public Squares squares;
+        [HideInInspector] public BoardSpawner spawner;
+        public Sorting sorting;
 
         public int Size { get; private set; }
-        public Sorting Sorting { get; private set; }
 
         public BoardGenerator boardGenerator;
         
-        [Command("squareSize")]
         public float squareSize = 1;
-
-        [Command("test")]
-        public int Test(int a, int b) => a + b;
 
         private void Awake()
         {
-            Sorting = new Sorting(this);
-            _entityManager = GetComponent<EntityManager>();
-            _squares = GetComponent<Squares>();
+            sorting = new Sorting(this);
+            entityManager = GetComponent<EntityManager>();
+            squares = GetComponent<Squares>();
+            spawner = GetComponent<BoardSpawner>();
         }
 
         private void Start()
@@ -40,21 +39,11 @@ namespace Game.Scripts.SkakBoard.Management
             BuildBoard();
         }
 
-        private void OnEnable()
-        {
-            Parser.Register(this, "board");
-        }
-
-        private void OnDisable()
-        {
-            Parser.Unregister(this);
-        }
-
         public void OnValidate()
         {
-            if (_squares)
+            if (squares)
             {
-                _squares.SyncSquaresPositions();
+                squares.SyncSquaresPositions();
             }
         }
 
@@ -68,8 +57,8 @@ namespace Game.Scripts.SkakBoard.Management
         {
             Size = boardGenerator.size;
 
-            _squares.Generate(boardGenerator);
-            _squares.SyncSquaresPositions();
+            squares.Generate(boardGenerator);
+            squares.SyncSquaresPositions();
         }
 
         public Vector3 ToBoard(Vector3 world)

@@ -8,8 +8,6 @@ namespace Game.Scripts.SkakBoard.Generators
     {
         public int size;
         
-        public SkakSpawner SkakSpawner => SkakSpawner.Instance;
-        
         public abstract Square[,] Generate(Board board);
     }
 }

@@ -8,6 +8,7 @@ namespace Game.Scripts.SkakBoard.Management
     public class EntityManager : MonoBehaviour
     {
         private readonly HashSet<BoardEntity> _entities = new HashSet<BoardEntity>();
+        private int idsCounter = 0;
         
         private Board _board;
         private Squares _squares;
@@ -29,7 +30,8 @@ namespace Game.Scripts.SkakBoard.Management
             if (!_squares.IsWalkable(pos)) return false;
             if (_entities.Any(e => e.boardPosition == pos)) return false;
          
-            boardEntity.boardPosition = pos;   
+            boardEntity.boardPosition = pos;
+            boardEntity.Place(_board, idsCounter++);
             _entities.Add(boardEntity);
 
             return true;

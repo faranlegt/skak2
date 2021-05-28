@@ -1,5 +1,6 @@
 using System;
 using Game.Scripts.SkakBoard.Management;
+using Popcron.Console;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -7,20 +8,15 @@ namespace Game.Scripts.SkakBoard.Entities
 {
     public class BoardEntity : MonoBehaviour
     {
-        private Lazy<Board> _boardLazy;
-
         private SpriteRenderer _spriteRenderer;
         private SortingGroup _sortingGroup;
         private bool _hasSortingGroup;
 
         public Vector2Int? boardPosition;
 
-        public Board Board => _boardLazy.Value;
-
-        public BoardEntity()
-        {
-            _boardLazy = new Lazy<Board>(GetComponentInParent<Board>);
-        }
+        public Board board;
+        public bool IsPlaced => id >= 0;
+        public int id = -1;
 
         private void Awake()
         {
@@ -33,7 +29,9 @@ namespace Game.Scripts.SkakBoard.Entities
 
         private void Update()
         {
-            int sorting = Board.Sorting.Entity(transform.position);
+            if (!IsPlaced) return;;
+            
+            int sorting = board.sorting.Entity(transform.position);
             if (_hasSortingGroup)
             {
                 _sortingGroup.sortingOrder = sorting;
@@ -42,6 +40,18 @@ namespace Game.Scripts.SkakBoard.Entities
             {
                 _spriteRenderer.sortingOrder = sorting;
             }
+        }
+
+        public void Place(Board newBoard, int newId)
+        {
+            board = newBoard;
+            id = newId;
+        }
+
+        public void RemoveFromBoard()
+        {
+            board = null;
+            id = -1;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using Game.Scripts.Models;
+using Popcron.Console;
 using UnityEngine;
 
 namespace Game.Scripts.SkakBoard.Entities
@@ -14,7 +15,7 @@ namespace Game.Scripts.SkakBoard.Entities
         public AnimationCurve jumpCurve;
         public Movement movement;
 
-        private void Start()
+        private void Awake()
         {
             _entity = GetComponent<BoardEntity>();
         }
@@ -23,10 +24,16 @@ namespace Game.Scripts.SkakBoard.Entities
         {
             if (!(movement is { } m)) return;
 
+            if (!_entity.IsPlaced)
+            {
+                Debug.LogError("Trying to move board which isn't placed on board");
+                return;
+            }
+
             m.Progress += Time.deltaTime / m.MovementTime;
 
             Vector3 source = m.Source;
-            Vector3 dest = _entity.Board.GetPositionFor(m.Destination);
+            Vector3 dest = _entity.board.GetPositionFor(m.Destination);
             Vector3 up = SkakGlobals.Instance.up * jumpCurve.Evaluate(m.Progress); 
             
             transform.position = Vector3.Lerp(source, dest, m.Progress) + up;

@@ -28,9 +28,17 @@ namespace Editor
                 return;
             }
 
-            bool destWalkable = entityMovement
-                .GetComponent<BoardEntity>()
-                .Board
+            var boardEntity = entityMovement.GetComponent<BoardEntity>();
+
+            if (!boardEntity.IsPlaced)
+            {
+                errorString = "Entity must be placed on board";
+                isValid = false;
+                return;
+            }
+
+            bool destWalkable = boardEntity
+                .board
                 .GetComponent<Squares>()
                 .IsWalkable(destination);
 

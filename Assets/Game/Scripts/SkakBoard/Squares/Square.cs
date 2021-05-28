@@ -62,7 +62,7 @@ namespace Game.Scripts.SkakBoard.Squares
         }
 
         public void SetSorting(int line) =>
-            _spriteRenderer.sortingOrder = GetComponentInParent<Board>().Sorting.Square(line);
+            _spriteRenderer.sortingOrder = GetComponentInParent<Board>().sorting.Square(line);
 
         private void OnValidate()
         {
