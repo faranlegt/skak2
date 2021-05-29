@@ -37,8 +37,6 @@ namespace Game.Scripts.SkakBoard.Management
         {
             var square = Instantiate(squarePrefab, _board.GetPositionFor(x, y), Quaternion.identity, _squaresParent);
             square.state = squareState;
-            
-            square.SyncSprite();
             square.SetSorting(y);
             square.name = $"Square ({x}, {y})";
 
