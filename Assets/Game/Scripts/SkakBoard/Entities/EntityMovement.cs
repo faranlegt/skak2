@@ -35,13 +35,16 @@ namespace Game.Scripts.SkakBoard.Entities
             Vector3 source = m.Source;
             Vector3 dest = _entity.board.GetPositionFor(m.Destination);
             Vector3 up = SkakGlobals.Instance.up * jumpCurve.Evaluate(m.Progress); 
-            
-            transform.position = Vector3.Lerp(source, dest, m.Progress) + up;
 
             if (m.Progress >= 1)
             {
                 OnMovementFinished?.Invoke(m);
                 movement = null;
+                transform.position = dest;
+            }
+            else
+            {
+                transform.position = Vector3.Lerp(source, dest, m.Progress) + up;
             }
         }
 
