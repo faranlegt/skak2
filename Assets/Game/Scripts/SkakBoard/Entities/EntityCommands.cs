@@ -21,7 +21,7 @@ namespace Game.Scripts.SkakBoard.Entities
             _canMove = TryGetComponent(out _movement);
             _isPiece = TryGetComponent(out _piece);
             
-            Parser.Register(this, $"m{_entity.id}");
+            Parser.Register(this, $"e{_entity.id}");
         }
 
         private void OnDestroy()
@@ -46,12 +46,14 @@ namespace Game.Scripts.SkakBoard.Entities
         [Command("move_t")]
         public string Move(int x, int y, float time)
         {
+            
             if (!_canMove) return "This entity is static";
 
             var m = new Movement
             {
                 Destination = new Vector2Int(x, y),
-                MovementTime = time
+                MovementTime = time,
+                Source = _entity.transform.position
             };
 
             _movement.Move(m);
