@@ -6,45 +6,38 @@ using UnityEngine;
 namespace Networking
 {
     [Category("Network")]
-    public class NetworkCommands : MonoBehaviour
+    public static class NetworkCommands
     {
-        private NetworkManager _networkManager;
+        private static NetworkManager NetworkManager => NetworkManager.Singleton;
 
-        private void Awake()
+        [Command("net host")]
+        public static void Host()
         {
-            _networkManager = GetComponent<NetworkManager>();
-            Parser.Register(this, "net");
+            NetworkManager.StartHost();
         }
 
-        [Alias("h")]
-        [Command("host")]
-        public void Host()
+        [Command("net connect")]
+        public static void Connect(string ip)
         {
-            _networkManager.StartHost();
-        }
-
-        [Command("connect")]
-        public void Connect(string ip)
-        {
-            _networkManager.StartClient();
+            NetworkManager.StartClient();
         }
 
         [Alias("s")]
         [Command("status")]
-        public string Status()
+        public static string Status()
         {
-            if (!NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
+            if (!NetworkManager.IsClient && !NetworkManager.IsServer)
             {
                 return "network is not started";
             } 
             
             var text = new StringBuilder();
-            string mode = NetworkManager.Singleton.IsHost 
+            string mode = NetworkManager.IsHost 
                 ? "Host" 
-                : NetworkManager.Singleton.IsServer ? "Server" : "Client";
+                : NetworkManager.IsServer ? "Server" : "Client";
             
             Value("Mode", mode);
-            Value("Transport", _networkManager.NetworkConfig.NetworkTransport.GetType().Name);
+            Value("Transport", NetworkManager.NetworkConfig.NetworkTransport.GetType().Name);
 
 
             void Value(string n, object value)
