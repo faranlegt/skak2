@@ -1,9 +1,6 @@
-using System;
-using System.Security.Cryptography;
 using Game.Scripts.SkakBoard.Entities;
 using Game.Scripts.SkakBoard.Squares;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Game.Scripts.SkakBoard.Management
 {
@@ -26,11 +23,11 @@ namespace Game.Scripts.SkakBoard.Management
             _squaresParent = CreateChildContainer("Squares");
         }
 
-        private Transform CreateChildContainer(string name)
+        private Transform CreateChildContainer(string containerName)
         {
             var go = new GameObject();
             go.transform.parent = transform;
-            go.name = name;
+            go.name = containerName;
 
             return go.transform;
         }

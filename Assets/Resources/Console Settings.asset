@@ -19,9 +19,11 @@ MonoBehaviour:
   logColor: {r: 1, g: 1, b: 1, a: 1}
   assemblyDefinitions:
   - {fileID: 5897886265953266890, guid: 279c1d08da464dc2879d0e6671b5b660, type: 3}
+  - {fileID: 5897886265953266890, guid: fa33a7b8155a4adebaf0ed383ded4f30, type: 3}
   blacklistedScenes: []
   assemblies:
   - SkakGameAssembly
+  - SkakNetworkingAssembly
   blacklistedSceneNames: []
   startupCommands:
   - info

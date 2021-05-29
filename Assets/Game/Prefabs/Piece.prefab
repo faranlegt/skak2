@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 8492501347946984461}
   - component: {fileID: 1122651195178756077}
   - component: {fileID: 660013318266121612}
+  - component: {fileID: -1755205404119918456}
   m_Layer: 0
   m_Name: Piece
   m_TagString: Untagged
@@ -231,6 +232,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c592b44720443b2a72868734c380cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1755205404119918456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4914754415151417253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NetworkInstanceId: 0
+  PrefabHash: 6310182152706918061
+  PrefabHashGenerator: Piece
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
 --- !u!1001 &3804730927060721335
 PrefabInstance:
   m_ObjectHideFlags: 0

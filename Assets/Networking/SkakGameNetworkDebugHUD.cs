@@ -1,7 +1,7 @@
 using MLAPI;
 using UnityEngine;
 
-namespace Game.Scripts
+namespace Networking
 {
     public class SkakGameNetworkDebugHUD : MonoBehaviour
     {

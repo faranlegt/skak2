@@ -1,0 +1,19 @@
+{
+    "name": "SkakNetworkingAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:279c1d08da464dc2879d0e6671b5b660",
+        "GUID:d187103b4bdd877429c736efbc905587",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:1491147abca9d7d4bb7105af628b223e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
