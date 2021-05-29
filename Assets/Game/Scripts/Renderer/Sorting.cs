@@ -22,6 +22,6 @@ namespace Game.Scripts.Renderer
 
         public int Square(int line) => (int)BaseLine(line);
 
-        public int Entity(Vector3 position) => (int)(BaseLine(_board.ToBoard(position).y) + _entityStep);
+        public int Entity(Vector3 position) => (int)(BaseLine(_board.ToBoard(position).y - 0.5f) + _entityStep);
     }
 }
