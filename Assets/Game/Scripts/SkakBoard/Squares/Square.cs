@@ -1,3 +1,4 @@
+using System;
 using Game.Scripts.Models;
 using Game.Scripts.Renderer;
 using Game.Scripts.SkakBoard.Management;
@@ -5,73 +6,39 @@ using UnityEngine;
 
 namespace Game.Scripts.SkakBoard.Squares
 {
+    [RequireComponent(typeof(LineAnimator))]
     public class Square : MonoBehaviour
     {
         private SpriteRenderer _spriteRenderer;
-        private float _animationTime = 0f;
+        private LineAnimator _animator;
 
-        public bool revalidate;
         public SquareState state;
         public SpritesLine[] spritesByType;
-        public AnimationCurve destructionAnimationCurve;
-        public float destructionTime = 2f;
+        
         public int firstBrokenSpriteNumber = 4;
         public int brokenSpritesCount = 4;
 
         private void Awake()
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            _animator = GetComponent<LineAnimator>();
 
-            SyncSprite();
+            _animator.OnAnimationEnd += () => Destroy(gameObject);
         }
 
-        private void Update()
+        private void Start()
         {
-            if (revalidate)
-            {
-                SyncSprite();
-                revalidate = false;
-            }
-
-            if (state.damageLevel == DamageLevel.Broken)
-            {
-                _animationTime += Time.deltaTime;
-                float brokenProgress = destructionAnimationCurve.Evaluate(_animationTime / destructionTime);
-                var brokenSprite = (int) Mathf.Lerp(0, brokenSpritesCount, brokenProgress);
-                transform.position = new Vector3(
-                    transform.position.x,
-                    transform.position.y,
-                    -brokenProgress
-                );
-
-                if (brokenSprite >= brokenSpritesCount)
-                {
-                    Destroy(gameObject);
-                }
-                else
-                {
-                    state.animationFrame = firstBrokenSpriteNumber + brokenSprite;
-                    SyncSprite();
-                }
-            }
-        }
-
-        public void SyncSprite()
-        {
-            _spriteRenderer.sprite = spritesByType[(int) state.squareType].sprites[state.animationFrame];
+            _animator.sprites = spritesByType[(int) state.squareType];
         }
 
         public void SetSorting(int line) =>
             _spriteRenderer.sortingOrder = GetComponentInParent<Board>().sorting.Square(line);
 
-        private void OnValidate()
-        {
-            revalidate = true;
-        }
-
         public void Brake()
         {
             state.damageLevel = DamageLevel.Broken;
+            _animator.animationFrame = firstBrokenSpriteNumber;
+            _animator.animate = true;
         }
     }
 }
