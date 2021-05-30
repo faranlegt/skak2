@@ -30,7 +30,8 @@ namespace Editor
             EditorGUILayout.PropertyField(_spritesProperty);
             if (animator && animator.sprites != null)
             {
-                EditorGUILayout.IntSlider(_animationFrameProperty, 0, animator.sprites.sprites.Length - 1);
+                animator.animationFrame =
+                    EditorGUILayout.IntSlider(animator.animationFrame, 0, animator.sprites.sprites.Length - 1);
             }
             EditorGUILayout.PropertyField(_loopProperty);
             EditorGUILayout.PropertyField(_frameLengthProperty);
