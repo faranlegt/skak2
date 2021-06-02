@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3505471799567182210}
   - component: {fileID: 3505471799567182221}
   - component: {fileID: -4452819551293661964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.375, y: 2.1875}
+  m_Size: {x: 1, y: 2.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -99,11 +99,10 @@ MonoBehaviour:
   state:
     squareType: 0
     damageLevel: 0
-    animationFrame: 0
     isWalkable: 1
   spritesByType:
-  - {fileID: 11400000, guid: 58f2037d2f03a3f4cacaea9323f0e004, type: 2}
-  - {fileID: 11400000, guid: 1522af3ae1df86541b3a759a793bc1f1, type: 2}
+  - {fileID: 11400000, guid: 52029f7652cfc44a49b48eae31ee76d4, type: 2}
+  - {fileID: 11400000, guid: 0b874237f6030483bb272ef793ec4111, type: 2}
   firstBrokenSpriteNumber: 4
   brokenSpritesCount: 4
 --- !u!114 &-4452819551293661964

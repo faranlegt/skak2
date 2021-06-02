@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Rendering
+namespace Rendering.Scripts
 {
     [ExecuteInEditMode]
     public class ShadowCamera : MonoBehaviour
@@ -9,8 +8,7 @@ namespace Rendering
         private static readonly int PiecesShadowMapPropertyId = Shader.PropertyToID("_PiecesShadowMap");
         private Camera _camera;
         private RenderTexture _shadowMap;
-
-
+        
         public Camera mainCamera;
 
         private void Start() => Rebuild();

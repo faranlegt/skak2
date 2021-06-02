@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Rendering
+namespace Rendering.Scripts
 {
     [RequireComponent(typeof(Camera))]
     public class OrthoCameraAdjuster : MonoBehaviour

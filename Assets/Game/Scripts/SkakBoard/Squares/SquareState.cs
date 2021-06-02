@@ -9,9 +9,6 @@ namespace Game.Scripts.SkakBoard.Squares
         public SquareType squareType;
 
         public DamageLevel damageLevel;
-        
-        [Range(0, 7)]
-        public int animationFrame = 0;
 
         public bool isWalkable = true;
     }

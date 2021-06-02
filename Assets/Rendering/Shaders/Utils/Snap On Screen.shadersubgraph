@@ -295,6 +295,12 @@
             "m_Id": "1ec68e9ab3924819a1b3ab2b658805c0"
         },
         {
+            "m_Id": "8578588119594cc4814763e77ed50efb"
+        },
+        {
+            "m_Id": "ca402f822b4047f4915d68ac81c03d3c"
+        },
+        {
             "m_Id": "3b8dec65b8ae456687134d4510f0fdf6"
         }
     ],
@@ -308,11 +314,15 @@
     "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"4a86bd2a0f2f14ed9b51224399689229\",\n        \"type\": 3\n    }\n}",
     "m_PropertyGuids": [
         "eb5587fc-f51a-45f9-92bc-46fccc78b21c",
-        "de1222e3-90b7-4dc4-8076-7caf06f86ae6"
+        "de1222e3-90b7-4dc4-8076-7caf06f86ae6",
+        "bb86c489-56db-4ade-82de-d7e507bb6e83",
+        "60026d39-ca46-474d-9096-f279923de2a1"
     ],
     "m_PropertyIds": [
         1481622041,
-        849702849
+        849702849,
+        979209940,
+        1480862421
     ]
 }
 
@@ -472,6 +482,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "8578588119594cc4814763e77ed50efb",
+    "m_Id": 979209940,
+    "m_DisplayName": "Snap Size",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Vector1_a9c38ae797b34c399eacc57c8af48bb1",
+    "m_StageCapability": 3,
+    "m_Value": 1.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "b0ddb1d30a6a41289a5e7d987da4e5ed",
     "m_Id": 1,
@@ -514,6 +539,20 @@
         "z": 0.0
     },
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BooleanMaterialSlot",
+    "m_ObjectId": "ca402f822b4047f4915d68ac81c03d3c",
+    "m_Id": 1480862421,
+    "m_DisplayName": "Use Screen",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Boolean_7a4512173fc44492b4ebf0893a6c5cd4",
+    "m_StageCapability": 3,
+    "m_Value": true,
+    "m_DefaultValue": false
 }
 
 {
