@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8865640649975165573}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7020270761287970856}
   - component: {fileID: 8000477429043617615}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 283495210914046115}
   - component: {fileID: 2168800289313338289}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: sea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
