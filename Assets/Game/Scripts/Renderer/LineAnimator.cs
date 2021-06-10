@@ -85,7 +85,7 @@ namespace Game.Scripts.Renderer
             SyncSprite();
         }
 
-        public void SyncSprite()
+        private void SyncSprite()
         {
             _renderer.sprite = sprites.sprites[animationFrame];
             _revalidate = false;

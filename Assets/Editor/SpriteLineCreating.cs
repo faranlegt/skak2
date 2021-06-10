@@ -7,7 +7,6 @@ namespace Editor
 {
     public class SpriteLineCreating : MonoBehaviour
     {
-        
         [MenuItem("Assets/Create/Skak/Sprites line")]
         public static void CreateSpritesLine()
         {
