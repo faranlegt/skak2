@@ -39,7 +39,7 @@ Material:
     - Vector1_a769336bb9454e3ab20e36cb29009961: 1
     - _BaseAlpha: 1
     - _FoamAccuracy: 0.1
-    - _NoiseCoef: 0.143
+    - _NoiseCoef: 0.2
     m_Colors:
     - Color_691505071b9f4bc2aad655f6f9e36732: {r: 0.3529412, g: 0.7137255, b: 0.7647059, a: 0}
     - _Color: {r: 0.3529412, g: 0.7137255, b: 0.7647059, a: 1}

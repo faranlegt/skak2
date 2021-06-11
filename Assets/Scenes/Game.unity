@@ -353,7 +353,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.203125
+  orthographic size: 7.5625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -449,7 +449,7 @@ MonoBehaviour:
   globalTextureName: _PiecesShadowMap
   cullingMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   customRendererIndex: 1
 --- !u!114 &1733466059
 MonoBehaviour:

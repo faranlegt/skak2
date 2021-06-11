@@ -73,7 +73,7 @@ Shader "Custom/Sea2"
                 const float  pi2 = 6.28318530718;
                 const float  directions = 32.0;
                 const float  quality = 8.0;
-                const float  size = 48.0;
+                const float  size = 64.0;
                 const float2 radius = size / _ScreenParams.xy;
 
                 const float2 v = i.screenPos;
