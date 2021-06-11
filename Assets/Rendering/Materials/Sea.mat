@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sea
-  m_Shader: {fileID: -6465566751694194690, guid: 4a48074385e5d46b1ac346ddf5742c53, type: 3}
+  m_Shader: {fileID: 4800000, guid: b23e3046166194b2aadb1286f42a1243, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 960ae0913cbcd42f78d372eb8d8a4139, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -33,6 +37,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_a769336bb9454e3ab20e36cb29009961: 1
+    - _BaseAlpha: 1
+    - _FoamAccuracy: 0.1
+    - _NoiseCoef: 0.143
     m_Colors:
     - Color_691505071b9f4bc2aad655f6f9e36732: {r: 0.3529412, g: 0.7137255, b: 0.7647059, a: 0}
+    - _Color: {r: 0.3529412, g: 0.7137255, b: 0.7647059, a: 1}
+    - _FoamColor: {r: 0.6784314, g: 0.98039216, b: 0.9607843, a: 1}
   m_BuildTextureStacks: []
