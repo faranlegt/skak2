@@ -28,6 +28,8 @@ namespace Rendering.Scripts
             _rebuildRequested |= resolution.x != Screen.width || resolution.y != Screen.height;
             if (!_rebuildRequested) return;
 
+            _rebuildRequested = false;
+
             resolution = new Vector2Int(Screen.width, Screen.height);
 
             Rebuild();
