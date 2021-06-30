@@ -68,6 +68,12 @@ Shader "Custom/Sea2"
                 return round(In / (1 / steps)) * (1 / steps);
             }
 
+            float2 noisePos()
+            {
+                float t = _Time.x / 8;
+                return float2(_CosTime.x * 2 + t, _SinTime.x * 2 + t);
+            }
+
             fixed4 frag(v2f i) : SV_Target
             {
                 const float  pi2 = 6.28318530718;
@@ -89,7 +95,7 @@ Shader "Custom/Sea2"
                     }
 
                 foamLevel /= quality * directions / 3;
-                foamLevel += (tex2D(_Noise, p + float2(_CosTime.x * 2, _SinTime.x * 2 + _Time.x / 8)).x - 0.5) * _NoiseCoef;
+                foamLevel += (tex2D(_Noise, p + noisePos()).x - 0.5) * _NoiseCoef;
                 foamLevel = posterize(clamp(foamLevel, 0, 1), 4);
                 float4 c = lerp(_Color, _FoamColor, foamLevel);
 
