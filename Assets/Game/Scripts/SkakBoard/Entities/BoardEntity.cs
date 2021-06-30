@@ -1,6 +1,4 @@
-using System;
 using Game.Scripts.SkakBoard.Management;
-using Popcron.Console;
 using UnityEngine;
 using UnityEngine.Rendering;
 

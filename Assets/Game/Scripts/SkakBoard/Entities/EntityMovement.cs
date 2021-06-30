@@ -1,6 +1,4 @@
-using System;
 using Game.Scripts.Models;
-using Popcron.Console;
 using UnityEngine;
 
 namespace Game.Scripts.SkakBoard.Entities
