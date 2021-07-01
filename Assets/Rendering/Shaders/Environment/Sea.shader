@@ -89,7 +89,7 @@ Shader "Custom/Sea2"
                 const float  pi2 = 6.28318530718;
                 const float  directions = 32.0;
                 const float  quality = 8.0;
-                const float  size = 24.0;
+                const float  size = 20.0;
                 const float2 radius = size / _ScreenParams.xy;
 
                 const float2 v = i.screenPos;
@@ -116,7 +116,7 @@ Shader "Custom/Sea2"
                             _Noise, 
                             applyXStretch(p, _Noise_TexelSize) + float2(_Time.x * 0.4, 0)
                         ).x
-                    ) * 0.1;
+                    ) * 0.08;
 
                 foamLevel += 
                     (
@@ -124,7 +124,7 @@ Shader "Custom/Sea2"
                             _Noise, 
                             applyXStretch(p, _Noise_TexelSize) + float2(0, _Time.x * 0.7)
                         ).x
-                    ) * 0.1;
+                    ) * 0.08;
 
                 // Ripple
 
@@ -145,10 +145,10 @@ Shader "Custom/Sea2"
                     ) * 0.1;
 
                 // Dither
-                foamLevel += ((pp.x + pp.y) % 2 * 2 - 1) * 0.005;
+                foamLevel += ((pp.x / 2 + pp.y) % 2 * 2 - 1) * 0.006;
 
                 // Posterize
-                foamLevel = posterize(clamp(foamLevel, 0, 1), 5);
+                foamLevel = posterize(clamp(foamLevel, 0, 1), 6);
 
                 float4 c = lerp(_Color, _FoamColor, foamLevel);
 
