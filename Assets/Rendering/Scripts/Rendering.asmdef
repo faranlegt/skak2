@@ -2,7 +2,8 @@
     "name": "Rendering",
     "rootNamespace": "",
     "references": [
-        "GUID:15fc0a57446b3144c949da3e2b9737a9"
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:dddc236333ad48338d491350a72f2cdf"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,11 +1,8 @@
 {
-    "name": "SkakGameAssembly",
+    "name": "SharedSkak",
     "rootNamespace": "",
     "references": [
-        "GUID:d187103b4bdd877429c736efbc905587",
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:1491147abca9d7d4bb7105af628b223e",
-        "GUID:dddc236333ad48338d491350a72f2cdf"
+        "GUID:d187103b4bdd877429c736efbc905587"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

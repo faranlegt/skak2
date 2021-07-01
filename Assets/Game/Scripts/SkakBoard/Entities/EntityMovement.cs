@@ -1,4 +1,5 @@
 using Game.Scripts.Models;
+using SharedRuntime;
 using UnityEngine;
 
 namespace Game.Scripts.SkakBoard.Entities

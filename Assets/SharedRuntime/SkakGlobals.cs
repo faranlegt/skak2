@@ -1,8 +1,7 @@
-using System;
 using Popcron.Console;
 using UnityEngine;
 
-namespace Game.Scripts
+namespace SharedRuntime
 {
     public class SkakGlobals : MonoBehaviour
     {
