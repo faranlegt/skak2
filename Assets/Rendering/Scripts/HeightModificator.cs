@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class HeightModificator : MonoBehaviour
 {
-    public new bool enabled;
+    public new bool enabled = true;
 
     public bool snap;
 
