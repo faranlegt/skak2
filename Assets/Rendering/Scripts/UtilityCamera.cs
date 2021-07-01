@@ -34,6 +34,8 @@ namespace Rendering.Scripts
                 return;
             }
             
+            Debug.Log("Rebuilding rendering textures for virtual cameras");
+            
             _createdCamera.CopyFrom(mainCamera);
             _createdCamera.backgroundColor = backgroundColor;
             _createdCamera.cullingMask = cullingMask.value;
@@ -43,6 +45,7 @@ namespace Rendering.Scripts
 
             if (_renderTexture)
             {
+                Debug.Log("releasing texture");
                 _renderTexture.Release();
             }
             
