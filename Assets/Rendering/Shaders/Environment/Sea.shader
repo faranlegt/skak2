@@ -41,6 +41,7 @@ Shader "Custom/Sea2"
             float4    _FoamColor;
             float     _BaseAlpha;
             sampler2D _HeightsMap;
+            sampler2D _SeaSquaresBase;
             float     _HeightCoefficient;
             float     _FoamAccuracy;
             sampler2D _Noise;
@@ -86,25 +87,10 @@ Shader "Custom/Sea2"
 
             fixed4 frag(v2f i) : SV_Target
             {
-                const float  pi2 = 6.28318530718;
-                const float  directions = 32.0;
-                const float  quality = 8.0;
-                const float  size = 20.0;
-                const float2 radius = size / _ScreenParams.xy;
-
                 const float2 pp = round(i.screenPos * _ScreenParams.xy / 2);
                 const float2 p = pp / _ScreenParams.xy * 2;
-                const float  h = i.world.z;
 
-                float foamLevel = foam(p, h);
-
-                for(float d = 0; d < pi2 / 2; d += pi2 / 2 / directions)
-                    for(float j = 1.0 / quality; j <= 1.0; j += 1.0 / quality)
-                    {
-                        foamLevel += foam(p + float2(cos(d), sin(d)) * radius * j, h);
-                    }
-
-                foamLevel /= quality * directions / 3;
+                float foamLevel = tex2D(_SeaSquaresBase, p);
                 
                 // Noise
 
