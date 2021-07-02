@@ -11,5 +11,7 @@ namespace Game.Scripts.SkakBoard.Squares
         public DamageLevel damageLevel;
 
         public bool isWalkable = true;
+
+        public float height;
     }
 }

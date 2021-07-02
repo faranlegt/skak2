@@ -52,7 +52,7 @@ MonoBehaviour:
   entityManager: {fileID: 0}
   squares: {fileID: 0}
   spawner: {fileID: 0}
-  boardGenerator: {fileID: 11400000, guid: 8240cb4846e34ab47a896a5c49cd1449, type: 2}
+  boardGenerator: {fileID: 11400000, guid: 8ec816a89853940ea9080e1e57a916d5, type: 2}
   squareSize: 1
 --- !u!114 &1260544096140937920
 MonoBehaviour:

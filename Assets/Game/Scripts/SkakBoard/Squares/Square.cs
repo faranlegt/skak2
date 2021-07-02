@@ -40,5 +40,16 @@ namespace Game.Scripts.SkakBoard.Squares
             _animator.animationFrame = firstBrokenSpriteNumber;
             _animator.animate = true;
         }
+
+        private void Update()
+        {
+            var pos = transform.position;
+            
+            if (!Mathf.Approximately(state.height, pos.z))
+            {
+                pos.z = state.height;
+                transform.position = pos;
+            }
+        }
     }
 }
