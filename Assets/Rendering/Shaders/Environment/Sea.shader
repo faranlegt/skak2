@@ -98,7 +98,7 @@ Shader "Custom/Sea2"
                     (
                         tex2D(
                             _Noise, 
-                            applyXStretch(p, _Noise_TexelSize) + float2(_Time.x * 0.4, 0)
+                            applyXStretch(p, _Noise_TexelSize) + _Time.x * float2(0.4, 0)
                         ).x
                     ) * 0.08;
 
@@ -106,7 +106,7 @@ Shader "Custom/Sea2"
                     (
                         tex2D(
                             _Noise, 
-                            applyXStretch(p, _Noise_TexelSize) + float2(0, _Time.x * 0.7)
+                            applyXStretch(p, _Noise_TexelSize) + _Time.x * float2(0, 0.7)
                         ).x
                     ) * 0.08;
 
@@ -116,7 +116,7 @@ Shader "Custom/Sea2"
                     (
                         tex2D(
                             _Ripple, 
-                            applyXStretch(p, _Ripple_TexelSize) * 2.5 + float2(-_Time.x * 0.7, 0)
+                            applyXStretch(p, _Ripple_TexelSize) * 2.5 + _Time.x * float2(-0.7, -0.1)
                         ).x
                     ) * 0.1;
 
@@ -124,7 +124,7 @@ Shader "Custom/Sea2"
                     (
                         tex2D(
                             _Ripple, 
-                            applyXStretch(p, _Ripple_TexelSize) * 2.5 + float2(_Time.x * 0.4, _Time.x * 0.1)
+                            applyXStretch(p, _Ripple_TexelSize) * 2.5 + _Time.x * float2(0.4, 0.2)
                         ).x
                     ) * 0.1;
 
