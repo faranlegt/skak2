@@ -245,6 +245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 283495210914046115}
   - component: {fileID: 2168800289313338289}
+  - component: {fileID: 4519603831609974897}
   m_Layer: 10
   m_Name: sea
   m_TagString: Untagged
@@ -303,8 +304,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2113826897
-  m_SortingLayer: 2
+  m_SortingLayerID: -582524335
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fe449a9f45076dd4991c48ff4361d9db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -317,3 +318,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4519603831609974897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546062095757745954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0f6691c463844d7b1b415bf5f527ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

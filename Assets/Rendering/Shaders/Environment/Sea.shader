@@ -92,11 +92,9 @@ Shader "Custom/Sea2"
                 const float  size = 20.0;
                 const float2 radius = size / _ScreenParams.xy;
 
-                const float2 v = i.screenPos;
                 const float2 pp = round(i.screenPos * _ScreenParams.xy / 2);
                 const float2 p = pp / _ScreenParams.xy * 2;
                 const float  h = i.world.z;
-                const float  worldHeight = (tex2D(_HeightsMap, v).b - 0.5) * -16 / _HeightCoefficient;
 
                 float foamLevel = foam(p, h);
 
@@ -152,7 +150,7 @@ Shader "Custom/Sea2"
 
                 float4 c = lerp(_Color, _FoamColor, foamLevel);
 
-                return fixed4(c.xyz, worldHeight < h);
+                return fixed4(c.xyz, 1);
             }
             ENDCG
         }

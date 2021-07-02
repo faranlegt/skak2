@@ -1,14 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using SharedRuntime;
 using UnityEngine;
 
-public class HeightModificator : MonoBehaviour
+namespace Rendering.Scripts
 {
-    public new bool enabled = true;
+    public class HeightModificator : MonoBehaviour
+    {
+        public new bool enabled = true;
 
-    public bool snap;
+        public bool snap;
 
-    public Vector3 original;
+        public Vector3 original;
+    }
 }
