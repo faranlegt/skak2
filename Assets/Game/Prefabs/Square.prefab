@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3505471799567182210}
   - component: {fileID: 3505471799567182221}
   - component: {fileID: -4452819551293661964}
-  - component: {fileID: -4842755294888489813}
+  - component: {fileID: 8001208916811107052}
   m_Layer: 9
   m_Name: Square
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   loop: 0
   animate: 0
   frameLength: 1
---- !u!114 &-4842755294888489813
+--- !u!114 &8001208916811107052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,8 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enabled: 1
-  snap: 1
+  snap: 0
   original: {x: 0, y: 0, z: 0}
+  priority: 0
 --- !u!1 &7411302184458087597
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,9 +151,8 @@ GameObject:
   - component: {fileID: 8595994180907292128}
   - component: {fileID: 5458438392333639453}
   - component: {fileID: 8840878339032822613}
-  - component: {fileID: 594383050630698766}
-  - component: {fileID: 7708507699114540191}
-  m_Layer: 0
+  - component: {fileID: 2244751272279264161}
+  m_Layer: 11
   m_Name: Sea Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6a87b69431146d3b7ad9e268db1c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &594383050630698766
+--- !u!114 &2244751272279264161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -251,18 +251,4 @@ MonoBehaviour:
   enabled: 1
   snap: 0
   original: {x: 0, y: 0, z: 0}
---- !u!114 &7708507699114540191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411302184458087597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad03b228a03344a9a05809e89227bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enabled: 1
-  snap: 0
-  original: {x: 0, y: 0, z: 0}
+  priority: -100

@@ -15,10 +15,12 @@ namespace Game.Scripts.Renderer
         public void Update()
         {
             var t = transform;
-            float seaLevel = Sea.Instance.transform.position.z;
-            _renderer.enabled = seaLevel > t.parent.transform.position.z;
+            var parentZ = t.parent.transform.position.z;
+            var seaLevel = Sea.Instance.transform.position.z;
+            
+            _renderer.enabled = seaLevel < parentZ;
             var pos = t.position;
-            pos.z = seaLevel;
+            pos.z = seaLevel - parentZ;
             t.position = pos;
         }
     }

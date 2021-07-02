@@ -9,5 +9,7 @@ namespace Rendering.Scripts
         public bool snap;
 
         public Vector3 original;
+
+        public int priority = 0;
     }
 }

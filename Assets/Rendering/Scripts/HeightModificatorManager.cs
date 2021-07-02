@@ -19,6 +19,7 @@ namespace Rendering.Scripts
         {
             _cache = FindObjectsOfType<HeightModificator>()
                 .Where(m => m.enabled)
+                .OrderBy(m => m.priority)
                 .ToArray();
 
             foreach (var modificator in _cache)
@@ -41,7 +42,7 @@ namespace Rendering.Scripts
 
         private void EndFrameRendering(ScriptableRenderContext ctx, Camera[] cameras)
         {
-            foreach (var modificator in _cache)
+            foreach (var modificator in _cache.Reverse())
             {
                 modificator.transform.position = modificator.original;
             }
