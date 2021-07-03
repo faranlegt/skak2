@@ -8,27 +8,57 @@ namespace Game.Scripts.SkakBoard.Generators
     [CreateAssetMenu(menuName = "Skak/Board Generators/Test Scene")]
     public class TestSceneBoardGenerator : BoardGenerator
     {
-        private float?[,] _heights =
+        //private float?[,] _heights =
+        //{
+        //    {
+        //        null, null, null, null, null
+        //    },
+        //    {
+        //        null, null, 1, 0.15f, null
+        //    },
+        //    {
+        //        null, 1, 1, 1, 1
+        //    },
+        //    {
+        //        0.15f, 1, 1, 1, null
+        //    },
+        //    {
+        //        null, null, null, null, null
+        //    },
+        //};
+
+        private float?[,] _heights;
+
+        void GenerateHeights()
         {
-            {
-                null, null, null, null, null
-            },
-            {
-                null, null, 1, 0.15f, null
-            },
-            {
-                null, 1, 1, 1, 1
-            },
-            {
-                0.15f, 1, 1, 1, null
-            },
-            {
-                null, null, null, null, null
-            },
-        };
+            int w = size;
+
+            _heights = new float?[w, w];
+
+            var cX = w / 2;
+            var cY = w / 2;
+
+            var k = 0.3f;
+            var nX = UnityEngine.Random.Range(0, 10000);
+            var nY = UnityEngine.Random.Range(0, 10000);
+
+            for (var y = 0; y < w; y++)
+                for (var x = 0; x < w; x++)
+                {
+                    var noise = Mathf.PerlinNoise(nX + x * k, nY + y * k);
+                    var fade = 1 - new Vector2(cX - x, cY - y).magnitude / cX;
+
+                    _heights[x, y] = (noise * 0.7f + fade * 2) / 2 - 0.1f;
+
+                    if (_heights[x, y] > 0.5f) _heights[x, y] = 1f;
+                    if (_heights[x, y] < 0.2f) _heights[x, y] = null;
+                }
+        }
 
         public override Square[,] Generate(Board board)
         {
+            GenerateHeights();
+
             int h = _heights.GetLength(0),
                 w = _heights.GetLength(1);
             
