@@ -47,7 +47,7 @@ namespace Game.Scripts.SkakBoard.Management
 
         public Vector3 GetPositionFor(int x, int y) =>
             transform.position +
-            new Vector3((x - Size / 2f + 0.5f) * squareSize, (y - Size / 2f + 0.5f) * squareSize, 0);
+            new Vector3((x - Size / 2f + 0.5f) * squareSize, (y - Size / 2f + 0.5f) * squareSize, squares.GetHeight(x, y));
 
         private void BuildBoard()
         {
