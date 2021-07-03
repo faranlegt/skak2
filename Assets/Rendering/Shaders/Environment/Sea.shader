@@ -51,6 +51,8 @@ Shader "Custom/Sea2"
             float4 _Noise_TexelSize;
             float4 _Ripple_TexelSize;
 
+            static const float PI = 3.14159265f;
+
             v2f vert(appdata v)
             {
                 v2f o;
@@ -94,9 +96,13 @@ Shader "Custom/Sea2"
 
                 // Waves
 
-                float wavePhase = sin(i.screenPos.y + i.screenPos.x * 0.7) * 5;
-                float wave = sin(_Time.x * 50 + wavePhase) * 0.1 + 0.02;
-                foamLevel += (abs(wave - foamLevel + 0.18) < 0.04) ? 0.6 : 0;
+                float wavePhase = sin(i.screenPos.y + i.screenPos.x * 0.7) * 60;
+                //float wave = sin(_Time.x * 50 + wavePhase) * 0.03 + 0.01;
+                //float w = 0.05 - abs(wave - foamLevel + 0.1);
+                //foamLevel += (w > 0) ? 0.2 : 0;
+
+                foamLevel += abs(sin(_Time.x * 30 + wavePhase * 0.1) * 0.4 + 0.6 - foamLevel) < 0.1 ? 0.3 : 0;
+                foamLevel += abs(sin(_Time.x * 30 + PI + wavePhase * 0.15) * 0.4 + 0.6 - foamLevel) < 0.05 ? 0.3 : 0;
                 
                 // Noise
 
@@ -104,17 +110,17 @@ Shader "Custom/Sea2"
                     (
                         tex2D(
                             _Noise, 
-                            applyXStretch(p, _Noise_TexelSize) + _Time.x * float2(0.4, 0)
+                            applyXStretch(p, _Noise_TexelSize) + _Time.x * float2(0.4, -0.1)
                         ).x
-                    ) * 0.08;
+                    ) * 0.09;
 
                 foamLevel += 
                     (
                         tex2D(
                             _Noise, 
-                            applyXStretch(p, _Noise_TexelSize) + _Time.x * float2(0, 0.7)
+                            applyXStretch(p, _Noise_TexelSize) + _Time.x * float2(-0.2, 0.7)
                         ).x
-                    ) * 0.08;
+                    ) * 0.09;
 
                 // Ripple
 

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Sea : MonoBehaviour
 {
-    private int SeaLevelShaderProperty = Shader.PropertyToID("_SeaLevel");
     public static Sea Instance;
     private float _oldZ;
 
@@ -29,7 +28,5 @@ public class Sea : MonoBehaviour
             return;
         }
         _oldZ = z;
-
-        Shader.SetGlobalFloat(SeaLevelShaderProperty, z);
     }
 }
