@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852a0396b7cd4494bc720f1f2f93513b, type: 3}
   m_Name: Test Scene Board Generator
   m_EditorClassIdentifier: 
-  size: 10
+  size: 15

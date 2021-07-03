@@ -91,6 +91,12 @@ Shader "Custom/Sea2"
                 const float2 p = pp / _ScreenParams.xy * 2;
 
                 float foamLevel = tex2D(_SeaSquaresBase, p);
+
+                // Waves
+
+                float wavePhase = sin(i.screenPos.y + i.screenPos.x * 0.7) * 5;
+                float wave = sin(_Time.x * 50 + wavePhase) * 0.1 + 0.02;
+                foamLevel += (abs(wave - foamLevel + 0.18) < 0.04) ? 0.6 : 0;
                 
                 // Noise
 

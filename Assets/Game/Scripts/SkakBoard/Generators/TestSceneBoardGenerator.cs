@@ -53,6 +53,7 @@ namespace Game.Scripts.SkakBoard.Generators
                     if (_heights[x, y] > 0.5f) _heights[x, y] = 1f;
                     if (_heights[x, y] < 0.2f) _heights[x, y] = null;
                 }
+            _heights[0, 0] = 1f;
         }
 
         public override Square[,] Generate(Board board)
