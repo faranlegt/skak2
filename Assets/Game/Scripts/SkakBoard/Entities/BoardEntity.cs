@@ -27,7 +27,7 @@ namespace Game.Scripts.SkakBoard.Entities
 
         private void Update()
         {
-            if (!IsPlaced) return;;
+            if (!IsPlaced) return;
             
             int sorting = board.sorting.Entity(transform.position);
             if (_hasSortingGroup)
