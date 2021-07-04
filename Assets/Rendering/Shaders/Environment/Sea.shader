@@ -144,7 +144,7 @@ Shader "Custom/Sea2"
                 foamLevel += ((pp.x / 2 + pp.y) % 2 * 2 - 1) * 0.006;
 
                 // Posterize
-                foamLevel = posterize(clamp(foamLevel, 0, 1), 6);
+                foamLevel = posterize(clamp(foamLevel, 0, 1), 7);
 
                 float4 c = lerp(_Color, _FoamColor, foamLevel);
 
