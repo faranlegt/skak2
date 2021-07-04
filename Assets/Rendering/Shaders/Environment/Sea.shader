@@ -62,15 +62,6 @@ Shader "Custom/Sea2"
                 return o;
             }
 
-            float foam(float2 v, float h)
-            {
-                const fixed3 original = tex2D(_HeightsMap, v).b;
-                const float  worldHeight = (tex2D(_HeightsMap, v).b - 0.5) * -16 / _HeightCoefficient;
-
-                return original * (worldHeight > h);
-                
-            }
-            
             float4 posterize(const float In, const float steps)
             {
                 return round(In / (1 / steps)) * (1 / steps);
@@ -94,16 +85,6 @@ Shader "Custom/Sea2"
 
                 float foamLevel = tex2D(_SeaSquaresBase, p);
 
-                // Waves
-
-                float wavePhase = sin(i.screenPos.y + i.screenPos.x * 0.7) * 60;
-                //float wave = sin(_Time.x * 50 + wavePhase) * 0.03 + 0.01;
-                //float w = 0.05 - abs(wave - foamLevel + 0.1);
-                //foamLevel += (w > 0) ? 0.2 : 0;
-
-                foamLevel += abs(sin(_Time.x * 30 + wavePhase * 0.1) * 0.4 + 0.6 - foamLevel) < 0.1 ? 0.3 : 0;
-                foamLevel += abs(sin(_Time.x * 30 + PI + wavePhase * 0.15) * 0.4 + 0.6 - foamLevel) < 0.05 ? 0.3 : 0;
-                
                 // Noise
 
                 foamLevel += 
@@ -139,6 +120,13 @@ Shader "Custom/Sea2"
                             applyXStretch(p, _Ripple_TexelSize) * 2.5 + _Time.x * float2(0.4, 0.2)
                         ).x
                     ) * 0.1;
+
+                // Waves
+
+                float wavePhase = sin(i.screenPos.y + i.screenPos.x * 0.7) * 60;
+
+                foamLevel += abs(sin(_Time.x * 30 + wavePhase * 0.1) * 0.4 + 0.6 - foamLevel) < 0.1 ? 0.3 : 0;
+                foamLevel += abs(sin(_Time.x * 30 + PI + wavePhase * 0.15) * 0.4 + 0.6 - foamLevel) < 0.05 ? 0.3 : 0;
 
                 // Dither
                 foamLevel += ((pp.x / 2 + pp.y) % 2 * 2 - 1) * 0.006;
