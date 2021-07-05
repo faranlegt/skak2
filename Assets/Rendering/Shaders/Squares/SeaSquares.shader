@@ -69,6 +69,8 @@ Shader "Skak/Squares/SeaSquares"
             sampler2D _PiecesShadowMap;
             float4    _ShadowColor;
 
+            const float  PI = 3.14159265f;
+
             v2f vert(appdata v)
             {
                 v2f o;
@@ -110,7 +112,7 @@ Shader "Skak/Squares/SeaSquares"
 
             float4 fog(float height, float2 screenPos, float4 base)
             {
-                const float2 uv = float2(_Time.y * 0.03, 0) + screenPos;
+                const float2 uv = float2(_Time.y * 0.03, _Time.y * 0.03) + screenPos;
                 const float  noise = UnityNoise(uv, 80);
                 float        fog = -height * 0.4 + 0.9 + noise * 0.4;
                 fog = clamp(fog, 0, 1);
@@ -121,7 +123,7 @@ Shader "Skak/Squares/SeaSquares"
 
             float4 waves(float height, float2 screenPos, float4 base)
             {
-                float wavesLevel = SeaLevel(
+                float waveLevel = SeaLevel(
                     screenPos,
                     _SeaNoise,
                     _SeaNoise,
@@ -130,8 +132,15 @@ Shader "Skak/Squares/SeaSquares"
                     _Ripple_TexelSize,
                     false
                 );
+                float wavePhase = sin(screenPos.y + screenPos.x * 0.7) * 0.5 + 0.5;
 
-                return lerp(_SeaColor, base, height > wavesLevel);
+                return lerp
+                    ( 
+                        base, 
+                        _SeaColor,
+                        (height < sin(_Time.x * 30 + PI + wavePhase * 6) * 0.15 + 0.1 + 0.7 * waveLevel)
+                    );
+
             }
 
 

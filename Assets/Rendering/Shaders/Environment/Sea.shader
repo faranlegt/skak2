@@ -3,6 +3,7 @@ Shader "Custom/Sea2"
     Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
+        _ShallowColor ("Shallow Color", Color) = (1,1,1,1)
         _FoamColor ("Foam Color", Color) = (1,1,1,1)
         _BaseAlpha ("Base alpha", Range(0,1)) = 0.0
         _Noise ("Noise", 2D) = "gray" {}
@@ -40,6 +41,7 @@ Shader "Custom/Sea2"
 
             float4    _Color;
             float4    _FoamColor;
+            float4    _ShallowColor;
             float     _BaseAlpha;
             sampler2D _HeightsMap;
             sampler2D _SeaSquaresBase;
@@ -78,7 +80,9 @@ Shader "Custom/Sea2"
                     true
                 );
                 foamLevel = posterize(foamLevel, 7);
-                float4 c = lerp(_Color, _FoamColor, foamLevel);
+
+                float4 c = (foamLevel < 0.65) * lerp(_Color, _ShallowColor, foamLevel / 0.65);
+                c += (foamLevel >= 0.65) * lerp(_ShallowColor, _FoamColor, (foamLevel - 0.65) / 0.35);
 
                 return fixed4(c.xyz, 1);
             }
