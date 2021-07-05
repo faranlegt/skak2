@@ -49,5 +49,6 @@ Material:
     - _SquaresInSpot: 4
     m_Colors:
     - _FogColor: {r: 0.3529412, g: 0.7137255, b: 0.7647059, a: 1}
+    - _SeaColor: {r: 0.6117647, g: 0.99215686, b: 0.8972519, a: 1}
     - _SpotColor: {r: 0.6509804, g: 0.41568628, b: 0.1764706, a: 1}
   m_BuildTextureStacks: []
