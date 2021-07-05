@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: seaSquares
+  m_Shader: {fileID: 4800000, guid: abc263be1c42640c29042c928fbdb3a1, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FogNoise:
+        m_Texture: {fileID: 2800000, guid: 960ae0913cbcd42f78d372eb8d8a4139, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 878913a1cae384efeafaa012e2bb12d4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Meta:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ripple:
+        m_Texture: {fileID: 2800000, guid: 029abe32b933943b6aa28e5b7a60e10b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SeaNoise:
+        m_Texture: {fileID: 2800000, guid: 34f7adfe1baba4a21b3fb3b61b497d91, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpotsTex:
+        m_Texture: {fileID: 2800000, guid: 10094353aca7648069b9808320d3ca17, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpCoef: 0.12
+    - _SeaLevel: 0
+    - _SquaresInSpot: 4
+    m_Colors:
+    - _FogColor: {r: 0.3529412, g: 0.7137255, b: 0.7647059, a: 1}
+    - _SpotColor: {r: 0.6509804, g: 0.41568628, b: 0.1764706, a: 1}
+  m_BuildTextureStacks: []

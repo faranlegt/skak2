@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0096d18b8e8fcbf4e91bc9d917acb7f4, type: 2}
+  - {fileID: 2100000, guid: 0438e2430e5774845b825f866005e645, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
     squareType: 0
     damageLevel: 0
     isWalkable: 1
+    height: 0
   spritesByType:
   - {fileID: 11400000, guid: 52029f7652cfc44a49b48eae31ee76d4, type: 2}
   - {fileID: 11400000, guid: 0b874237f6030483bb272ef793ec4111, type: 2}

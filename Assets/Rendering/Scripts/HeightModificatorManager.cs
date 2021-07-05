@@ -16,7 +16,7 @@ namespace Rendering.Scripts
         }
 
         private void BeginFrameRendering(ScriptableRenderContext ctx, Camera[] cameras)
-        {
+        {   
             _cache = FindObjectsOfType<HeightModificator>()
                 .Where(m => m.enabled)
                 .OrderBy(m => m.priority)
